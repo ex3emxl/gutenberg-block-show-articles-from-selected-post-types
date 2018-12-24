@@ -46,7 +46,7 @@ registerBlockType(
         })(props => {
                 const {
                     posts, posttypes, attributes: {
-                        highContrast, typeOfPost, sortOfPost, numberOfPost
+                        typeOfPost, sortOfPost, numberOfPost
                     },
                     className, setAttributes
                 } = props;
