@@ -42,5 +42,8 @@ function _get_plugin_url() {
 // Enqueue JS and CSS
 include __DIR__ . '/lib/enqueue-scripts.php';
 
+// Modificate Another Post Types
+include __DIR__ . '/lib/modificate-post-types.php';
+
 // Show Articles Block
 include __DIR__ . '/blocks/show-articles/index.php';

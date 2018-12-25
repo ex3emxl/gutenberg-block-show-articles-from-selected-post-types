@@ -41,7 +41,7 @@ registerBlockType(
                     per_page: props.attributes.numberOfPost,
                     order: props.attributes.sortOfPost
                 }),
-                posttypes: select('core').getPostTypes()
+                posttypes: select('core').getPostTypes({_builtin: false})
             };
         })(props => {
                 const {
@@ -56,7 +56,8 @@ registerBlockType(
 
                 let result;
                 if (posttypes) {
-                    this.result = posttypes.map(arg => {
+                    this.result = posttypes.filter(arg => arg.slug !== 'attachment' && arg.slug !== 'wp_block').map(arg => {
+                        console.log(arg.slug);
                         return {
                             label: arg.name,
                             value: arg.slug
