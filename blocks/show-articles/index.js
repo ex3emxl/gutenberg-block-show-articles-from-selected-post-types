@@ -41,7 +41,7 @@ registerBlockType(
                     per_page: props.attributes.numberOfPost,
                     order: props.attributes.sortOfPost
                 }),
-                posttypes: select('core').getPostTypes({_builtin: false})
+                posttypes: select('core').getPostTypes()
             };
         })(props => {
                 const {
